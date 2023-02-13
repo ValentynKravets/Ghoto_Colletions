@@ -5,9 +5,9 @@ import {Collection} from './Collections';
 const cats = [
   { "name": "Все" },
   { "name": "Море" },
-  { "name": "Горы" },
-  { "name": "Архитектура" },
-  { "name": "Города" }
+  { "name": "Гори" },
+  { "name": "Архітектура" },
+  { "name": "Міста" }
 ]
 function App() {
   const[categoryId, setCategoryId] = React.useState(0);
@@ -33,7 +33,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Моя коллекция фотографий</h1>
+      <h1>Моя колекція фотографій</h1>
       <div className="top">
         <ul className="tags">
           {cats.map((obj,i)=>(
@@ -44,7 +44,7 @@ function App() {
         value={searchValue}
         onChange={(e)=> setSearchValue(e.target.value)} 
         className="search-input" 
-        placeholder="Поиск по названию" />
+        placeholder="Пошук по назві" />
       </div>
       <div className="content">
         { isLoading ? (<h2>Йде завантаження...</h2>) : (collections.filter(obj =>obj.name.toLowerCase().includes(searchValue.toLocaleLowerCase()))
